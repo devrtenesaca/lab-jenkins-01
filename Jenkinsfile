@@ -8,7 +8,7 @@ pipeline{
         stage("checkout"){
             steps{
                 echo "========executing A========"
-                git branch: 'main', url: ''
+                git branch: 'main', url: 'https://github.com/devrtenesaca/lab-jenkins-01.git'
             }
         }
         stage("build"){
