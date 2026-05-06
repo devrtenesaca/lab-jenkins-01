@@ -5,6 +5,7 @@ pipeline{
         MACHINE = """${
         sh (returnStdout: true, script: 'uname -a').trim()
      }"""
+    }
     stages{
         stage("checkout"){
             steps{
