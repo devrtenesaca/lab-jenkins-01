@@ -2,8 +2,9 @@ pipeline{
     agent any
     environment {
         NAME = "Jenkins"
-        MACHINE = "linux"
-    }
+        MACHINE = """${
+        sh (returnStdout: true, script: 'uname -a').trim()
+     }"""
     stages{
         stage("checkout"){
             steps{
