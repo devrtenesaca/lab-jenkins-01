@@ -9,6 +9,9 @@ pipeline{
             steps{
                 echo "========executing A========"
                 git branch: 'master', url: 'https://github.com/devrtenesaca/lab-jenkins-01.git'
+                //interpolation variables 
+                echo "NAME: ${NAME}"
+                echo "MACHINE: ${MACHINE}"
             }
         }
         stage("build"){
