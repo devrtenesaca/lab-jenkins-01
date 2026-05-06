@@ -14,7 +14,8 @@ pipeline{
         stage("build"){
             steps{
                 echo "========executing B========"
-                sh "python3 machine.py ${MACHINE}"
+                sh 'python3 machine.py ${NAME}, ${MACHINE}'
+               
             }
         }
    
